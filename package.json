@@ -1,30 +1,29 @@
 {
-  "name": "alexa-app-example",
-  "version": "0.0.1",
-  "description": "An example Alexa Skill project using the alexa-app module with Express.",
+  "name": "alexaserver",
+  "version": "1.0.0",
+  "description": "Sample Alexa Server Project",
   "main": "index.js",
+  "dependencies": {
+    "alexa-app-server": "^2.2.4"
+  },
+  "devDependencies": {},
   "scripts": {
-    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alexa-js/alexa-app-example.git"
+    "url": "git+https://github.com/Kenji776/AlexaServer1.git"
   },
   "keywords": [
     "alexa",
-    "amazon",
-    "echo",
-    "skills"
+    "test",
+    "server",
+    "echo"
   ],
-  "author": "Tejas Shah",
+  "author": "Daniel Llewellyn",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/alexa-js/alexa-app-example/issues"
+    "url": "https://github.com/Kenji776/AlexaServer1/issues"
   },
-  "dependencies": {
-    "alexa-app": "^4.0.0",
-    "ejs": "^2.5.6",
-    "express": "^4.15.2"
-  }
+  "homepage": "https://github.com/Kenji776/AlexaServer1#readme"
 }
