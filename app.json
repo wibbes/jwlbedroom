@@ -1,6 +1,13 @@
 {
-  "name": "Node.js Socket.io Example",
-  "description": "Part of the Using WebSockets on Heroku Tutorial",
-  "repository": "https://github.com/heroku-examples/node-socket.io",
-  "keywords": ["node", "websocket", "socket.io"]
+  "name": "alexa-app example",
+  "description": "A simple alexa-app example for Heroku.",
+  "repository": "https://github.com/alexa-js/alexa-app-example",
+  "logo": "https://avatars0.githubusercontent.com/u/25057028",
+  "keywords": ["alexa", "amazon", "echo", "skills"],
+  "success_url": "/test",
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
 }
