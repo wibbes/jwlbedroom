@@ -9,7 +9,7 @@ let express = require('express'),
     app = express();
 
 app.use(bodyParser.json());
-app.post('/forecast', function(req, res) {
+app.post('/on', function(req, res) {
     // We'll fill this out later!
     res.json({ hello: 'world' });
 });
