@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+.aaa {
+	font-size: 36px;
+}
+.aaa {
+	font-size: 45px;
+}
+</style>
+</head>
+
+<body>
+<p class="aaa"><span class="aaa">Rainbow Light <a onclick="rainOn()" href="#">ON</a> - <a  onclick="rainOff()" href="#">OFF</a></span></p>
+<p class="aaa">&nbsp;</p>
+<p class="aaa"><span class="aaa">White Light <a onclick="whiteOn()" href="#">ON</a> - <a  onclick="whiteOff()" href="#">OFF</a></span></p>
+<p class="aaa">&nbsp;</p>
+<p class="aaa">&nbsp;</p>
+<p class="aaa"><span class="aaa">Max Brightness
+  <input id="slide" type="range" min="1" max="255" step="1" value="20" onchange="updateBright(this.value)">
+</span></p>
+<p class="aaa"><span class="aaa">
+  Max White Brightness
+  <input id="slide2" type="range" min="1" max="255" step="1" value="200" onchange="updateWBright(this.value)" />
+</span></p>
+<p>&nbsp; </p>
+<span class="aaa">
+<iframe id="http"style="width:0;height:0;border:0; border:none;">
+
+</iframe>
+
+
+</span>
+<script>
+function whiteOn() {
+  document.getElementById("http").src = "http://192.168.0.13/white.html?state=true";
+}
+function whiteOff() {
+  document.getElementById("http").src = "http://192.168.0.13/white.html?state=false";
+}
+function rainOn() {
+  document.getElementById("http").src = "http://192.168.0.13/on";
+}
+function rainOff() {
+  document.getElementById("http").src = "http://192.168.0.13/off";
+}
+ function updateBright(slideAmount) {
+        document.getElementById("http").src = "http://192.168.0.13/info.html?MAX="+slideAmount;
+        
+    }
+	 function updateWBright(slideAmount) {
+        document.getElementById("http").src = "http://192.168.0.13/white.html?bright="+slideAmount;
+        
+    }
+</script>
+</body>
+</html>
