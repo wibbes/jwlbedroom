@@ -1,10 +1,12 @@
 var http = require('http');
 const PORT = process.env.PORT || 3000;
 
-//create a server object:
+
+var fs = require('fs');
 http.createServer(function (req, res) {
-  res.write('Hello World!'); //write a response to the client
-  console.log(req);
-  console.log(res);
-  res.end(); //end the response
-}).listen(PORT); //the server object listens on port 8080
+  fs.readFile('index.html', function(err, data) {
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.write(data);
+    res.end();
+  });
+}).listen(8080);
